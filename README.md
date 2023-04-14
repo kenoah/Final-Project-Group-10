@@ -51,7 +51,7 @@ This project provides valuable information on how to use the Infrastructure as C
 
 #### 3 | Generating SSH Keys
   In all the webserver folders of the environments root folder, SSH keys need to be generated which is used for deploying the infrastructure.
-  The naming convention to be followed is "Group10"-<environment-name>, for example "Group10-Dev".
+  The naming convention to be followed is "Group10"-<environment-name>, for example "Group10-prod".
   
   To generate SSH key use the command below, the format is changes according to the branch it is been executed in:
   ```
@@ -61,9 +61,9 @@ This project provides valuable information on how to use the Infrastructure as C
 #### 3 | Deploying S3 bucket
   On the AWS management console create S3 buckets for each environment. These buckets will store the tfstate for its corresponding environments and also the images to be displayed on the webpage.
   The naming of the s3 buckets should be as follows:
-    -- dev-s3-acsgroup10
-    -- staging-s3-acsgroup10
-    -- prod-s3-acsgroup10
+    - dev-s3-acsgroup10,
+    - staging-s3-acsgroup10,
+    - prod-s3-acsgroup10,
   
   Each of the buckets should have the images folder in the git uploaded to it.
   
