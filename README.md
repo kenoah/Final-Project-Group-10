@@ -3,15 +3,10 @@
 ## Group 10
 
 ### Overview
+The purpose of this project is to demonstrate the use of Terraform for automating the deployment of a two-tier web application on AWS. The infrastructure architecture is built on AWS, and it is designed to host the website on multiple instances across different environments with varying configurations. This project involves the use of launch templates, auto-scaling groups and policies, load balancers, and AWS Identity and Access Management. The implementation of this project also showcases the usage of Terraform modules and GitHub Actions.
 
-- The objective of this project is to demonstrate a two-tier web application automation using Terraform.
-- We build an infrastructure architecture on AWS inorder to host our website in all the instances across multiple environments with varied configurations.
-- We further work with launch template, auto-scaling groups and policies, load balancer and AWS identity and access management. 
-- This project implementation also demonstrates the usage of modules and github actions. 
-
-### Learnings
-- This project sheds an insight onto effective practices to deploy infrastructure using Infrastucture as code tool "Terraform" using various infrastructure constructs like auto-scaling groups, load balancer, bastion usage, auto-scaling policies, usage of cloud watch metrics.
-- Further, usage of terraform constructs like modules and following best practices to deploy infrastructure provided an insight into the industry practices.
+### Learnings 
+This project provides valuable information on how to use the Infrastructure as Code tool called "Terraform" effectively to deploy infrastructure. It covers the use of various infrastructure constructs such as auto-scaling groups, load balancers, bastion usage, auto-scaling policies, and cloud watch metrics. In addition, by using Terraform constructs like modules and following best practices, this project also sheds light on industry practices for infrastructure deployment.
 
 ### The‌ ‌Roadmap‌ ‌is‌ ‌divided‌ ‌into‌ ‌2‌ ‌Sections‌ ‌
 
@@ -27,7 +22,7 @@
   - Once the local repository is setup, navigate to the branch you want to work on (dev is preferred) using 
                 ``` git checkout <branch-name> ```
   
-  - The repository has 3 main branches dev, staging and prod. prod is the main branch of the repo.
+  - The repository has 3 main branches prod, dev and staging. prod is the main/default branch of the repo.
   The development changes need to be done in the dev branch and the working code shall be pulled onto staging and prod branches.
 
 #### 2 | Understanding the Code Base Structure
@@ -35,18 +30,18 @@
     The code base has the following structure,
       1. environments
         - dev
-          -- networking
-          -- webserver
+          --> networking
+          --> webserver
         - prod
-          -- networking
-          -- webserver
+          --> networking
+          --> webserver
         - staging
-          -- networking
-          -- webserver
+          --> networking
+          --> webserver
       2. images
       3. modules
-        - aws_network
-        - aws_webserver
+        --> aws_network
+        --> aws_webserver
         
   - The environments folder is the root folder that contains the configuration for each of the prod, dev and staging environments. It has networking and webserver subfolders that is dependent on the aws_network and aws_webserver modules present in the modules folder.
   - The networking part specifies the configuration with respect to the network of the architecture which includes the VPC, subnets and the network gateways.
@@ -55,7 +50,7 @@
 
 #### 3 | Generating SSH Keys
   In all the webserver folders of the environments root folder, SSH keys need to be generated which shall be used for deploying infrastructure.
-  The naming convention to be followed is "Group10"-<environment-name>, for example "Group13-Dev".
+  The naming convention to be followed is "Group10"-<environment-name>, for example "Group10-Dev".
   
   To generate SSH key use the command below,
   ```
@@ -103,8 +98,7 @@
   
   Once the infrastructure is deployed, get the load balancer dns to access the webpage via a browser.
   
-  The dns name of the load balancer is not output after the deployment as it violates tfsec. 
-  If you would still like to output the dns name use the code block below in the aws_webserver module's output.tf and access the same from the output.tf in the webserver folder of the individual environments.
+  Due to a violation of tfsec, the DNS name of the load balancer is not displayed as output after deployment. However, if you still want to access the DNS name, you can include the provided code block in the output.tf file of the aws_webserver module, and then access it from the output.tf file in the webserver folder of each individual environment.
   
   ```
     output "load_balancer_dns_name" {
