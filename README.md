@@ -60,8 +60,8 @@ This project provides valuable information on how to use the Infrastructure as C
 #### 3 | Deploying S3 bucket
   On the AWS management console create S3 buckets for each environment. These buckets will store the tfstate for its corresponding environments and also the images to be displayed on the webpage.
   The naming of the s3 buckets should be as follows:
-    - dev-s3-acsgroup10
-    - staging-s3-acsgroup10
+    - dev-s3-acsgroup10,
+    - staging-s3-acsgroup10,
     - prod-s3-acsgroup10
   
   Each of the buckets should have the images folder in the git uploaded to it.
