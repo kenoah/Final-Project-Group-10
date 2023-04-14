@@ -55,7 +55,7 @@
 
 #### 3 | Generating SSH Keys
   In all the webserver folders of the environments root folder, SSH keys need to be generated which shall be used for deploying infrastructure.
-  The naming convention to be followed is "Group13"-<environment-name>, for example "Group13-Dev".
+  The naming convention to be followed is "Group10"-<environment-name>, for example "Group10-Dev".
   
   To generate SSH key use the command below,
   ```
@@ -65,9 +65,9 @@
 #### 3 | Deploying S3 bucket
   On the AWS management console create S3 buckets for each environment. These buckets will store the tfstate for its corresponding environments and also the images to be displayed on the webpage.
   The naming of the s3 buckets should be as follows:
-    - dev-s3-acsgroup13
-    - staging-s3-acsgroup13
-    - prod-s3-acsgroup13
+    - dev-s3-acsgroup10
+    - staging-s3-acsgroup10
+    - prod-s3-acsgroup10
   
   Each of the buckets should have the images folder in the git uploaded to it.
   
@@ -111,14 +111,7 @@
       value = aws_lb.loadBalancer.dns_name
     }
   ```
-  
-  ***Access the private webserver via Bastion***
-  
-  The admins can access the private web servers via SSH only through the Bastion Server. To do the same, connect to Bastion server via SSH using it's public ip and ssh-key associated with it through the command below.
-  ``` ssh -i <private-ssh-key> ec2-user@<bastion-public-IP> ```
-  
-  Further, inside the Bastion server, get the SSH Key associated with the private webserver and use the below command to access the machine.
-  ``` ssh -i <private-ssh-key> ec2-user@<webserver-private-IP> ```
+
   
   ***Delete the Infrastructure***
   
