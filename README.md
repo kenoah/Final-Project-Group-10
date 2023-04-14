@@ -112,14 +112,6 @@
     }
   ```
   
-  ***Access the private webserver via Bastion***
-  
-  The admins can access the private web servers via SSH only through the Bastion Server. To do the same, connect to Bastion server via SSH using it's public ip and ssh-key associated with it through the command below.
-  ``` ssh -i <private-ssh-key> ec2-user@<bastion-public-IP> ```
-  
-  Further, inside the Bastion server, get the SSH Key associated with the private webserver and use the below command to access the machine.
-  ``` ssh -i <private-ssh-key> ec2-user@<webserver-private-IP> ```
-  
   ***Delete the Infrastructure***
   
   Deletion of resources should be done in an order to ensure proper deletion. The webserver components must be deleted before deleting the networking part.
