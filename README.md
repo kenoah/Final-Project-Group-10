@@ -4,10 +4,10 @@
 
 Overview
 
-The purpose of this project is to demonstrate the use of Terraform for automating the deployment of a two-tier web application on AWS. The infrastructure architecture is built on AWS, and it is designed to host the website on multiple instances across different environments with varying configurations. This project involves the use of launch templates, auto-scaling groups and policies, load balancers, and AWS Identity and Access Management. The implementation of this project also showcases the usage of Terraform modules and GitHub Actions.
+- The purpose of this project is to demonstrate the use of Terraform for automating the deployment of a two-tier web application on AWS. The infrastructure architecture is built on AWS, and it is designed to host the website on multiple instances across different environments with varying configurations. This project involves the use of launch templates, auto-scaling groups and policies, load balancers, and AWS Identity and Access Management. The implementation of this project also showcases the usage of Terraform modules and GitHub Actions.
 
 Learnings
-This project provides valuable information on how to use the Infrastructure as Code tool called "Terraform" effectively to deploy infrastructure. It covers the use of various infrastructure constructs such as auto-scaling groups, load balancers, bastion usage, auto-scaling policies, and cloud watch metrics. In addition, by using Terraform constructs like modules and following best practices, this project also sheds light on industry practices for infrastructure deployment.
+- This project provides valuable information on how to use the Infrastructure as Code tool called "Terraform" effectively to deploy infrastructure. It covers the use of various infrastructure constructs such as auto-scaling groups, load balancers, bastion usage, auto-scaling policies, and cloud watch metrics. In addition, by using Terraform constructs like modules and following best practices, this project also sheds light on industry practices for infrastructure deployment.
 
 ### The‌ ‌Roadmap‌ ‌is‌ ‌divided‌ ‌into‌ ‌2‌ ‌Sections‌ ‌
 
@@ -51,7 +51,7 @@ This project provides valuable information on how to use the Infrastructure as C
 
 #### 3 | Generating SSH Keys
   In all the webserver folders of the environments root folder, SSH keys need to be generated which is used for deploying the infrastructure.
-  The naming convention to be followed is "Group10"-<environment-name>, for example "Group10-prod".
+  The naming convention to be followed is "Group10"-<environment-name>, for example "Group10-Prod".
   
   To generate SSH key use the command below, the format is changes according to the branch it is been executed in:
   ```
