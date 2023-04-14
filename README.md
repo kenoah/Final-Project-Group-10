@@ -19,7 +19,7 @@
 #### 1 | Clone the repository and Explore the branches
 
   ``` 
-  git clone git@github.com:Zantorym/ACS-Final-Project.git 
+  git clone git@github.com:kenoah/Final-Project-Group-10.git 
   ```
   
   ***Note:*** The clone command is SSH based, so ensure that SSH key is added in your environment.
