@@ -63,7 +63,7 @@ This project provides valuable information on how to use the Infrastructure as C
   The naming of the s3 buckets should be as follows:
     - dev-s3-acsgroup10,
     - staging-s3-acsgroup10,
-    - prod-s3-acsgroup10,
+    - prod-s3-acsgroup10
   
   Each of the buckets should have the images folder in the git uploaded to it.
   
