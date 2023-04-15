@@ -110,8 +110,8 @@ Learnings
   
   ***Delete the Infrastructure***
   
-  Deletion of resources should be done in an order to ensure proper deletion. The webserver components must be deleted before deleting the networking part.
-  This is important because if we attempt deletion of networking before webserver, few components will not be deleted and will time out given that the webserver components are still using the network components.
+ To ensure proper deletion, resources should be deleted in the appropriate order. Before uninstalling the networking component, the webserver components first need to be  removed.
+ This is crucial because, given that the webserver components are still using the network components, some components won't be eliminated if we try to delete networking   before webserver.
   Follow the steps below to destroy the Infrastructure (The example is for dev environment),
   
   ```
